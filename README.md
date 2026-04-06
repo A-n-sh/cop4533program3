@@ -10,17 +10,21 @@ Computes the Highest-Value Longest Common Subsequence of two strings over a fixe
 Question 1: Empirical Comparison
 
 Question 2: Recurrence Equation
+
 Let dp[i][j] = max value of any common subsequence of A[1..i] and B[..j]
 
 Base Cases:
+
 dp[i][0] = 0 for all i = 0, 1, ..., n
 dp[0][j] = 0 for all j = 0, 1, ..., m
 
 Recurrence:
+
 dp[i][j] = dp[i - 1][j - 1] + v(A[i])	if A[i] == B[j]
 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])	if A[i] != B[j]
 
 Why Recurrence is Correct:
+
 Case 1: A[i] == B[j]: Characters match, so we include this character in the common subsequence. Since all character values are nonnegative, including a matching character only helps, so we take it. The best value we can achieve is whatever was optimal for A[1..i - 1] and B[1..j - 1] plus v(A[i])
 
 Case 2: A[i] != B[j]: Characters differ, so at least one must be skipped. We try both options and take the better one:
