@@ -13,17 +13,20 @@ Question 2: Recurrence Equation
 
 Let dp[i][j] = max value of any common subsequence of A[1..i] and B[..j]
 
+
 Base Cases:
 
 dp[i][0] = 0 for all i = 0, 1, ..., n
 
 dp[0][j] = 0 for all j = 0, 1, ..., m
 
+
 Recurrence:
 
 dp[i][j] = dp[i - 1][j - 1] + v(A[i])	if A[i] == B[j]
 
 dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])	if A[i] != B[j]
+
 
 Why Recurrence is Correct:
 
