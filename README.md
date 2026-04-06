@@ -7,9 +7,9 @@ Computes the Highest-Value Longest Common Subsequence of two strings over a fixe
 * Run example 1 using
 
 ## Written Component:
-Question 1: Empirical Comparison
+### Question 1: Empirical Comparison
 
-Question 2: Recurrence Equation
+### Question 2: Recurrence Equation
 
 Let dp[i][j] = max value of any common subsequence of A[1..i] and B[..j]
 
@@ -39,7 +39,7 @@ Case 2: A[i] != B[j]: Characters differ, so at least one must be skipped. We try
 
 The optimal solution at dp[i][j] is always built from the optimal solution of a smaller subproblem, so no greedy choices needed. The same subproblems are reused multiple times, which is why we store results in a table rather than recompute recursively. The final answer is dp[n][m]
 
-Question 3: Big-Oh
+### Question 3: Big-Oh
 HVLCS(A, B, val):
 	n = length(A)
 	m = length(B)
