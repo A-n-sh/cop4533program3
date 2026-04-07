@@ -4,11 +4,14 @@ Computes the Highest-Value Longest Common Subsequence of two strings over a fixe
 ## Usage
 * No compilation needed - requires Python 3
 * Example inputs and outputs are located in 'examples/'
-* Run example 1 using
+* Run example 1 using python HVLCS.py < examples/example1.in
+* Benchmark example 1 using python bench.py < examples/example1.in
 
 ## Written Component:
 ### Question 1: Empirical Comparison
+Assuming n=m, the runtime vs. input size graph is the following:
 
+![runtime vs. input size](graph.png)
 ### Question 2: Recurrence Equation
 
 Let dp[i][j] = max value of any common subsequence of A[1..i] and B[..j]
