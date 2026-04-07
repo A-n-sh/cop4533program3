@@ -46,4 +46,5 @@ def solve():
     print(dp[n][m])
     print(''.join(result))
 
-solve()
+if __name__=="__main__":
+    solve()
